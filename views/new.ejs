@@ -1,0 +1,20 @@
+ <link rel='stylesheet' href='/stylesheets/style.css' />
+  <nav>
+    <a href="/home">HOME</a> |
+    <a href="/plans">PLAN</a> |
+     <a href="/logout">LOG OUT</a>
+       </nav>
+ </nav>
+
+<form>
+  <section id="plan">
+  <div>What needs to happen? </div>
+  <div><%= plan.task %></div>  
+  <div>By when?: </div>
+  <div><%= plan.date %></div>
+  <div>By who?: </div>
+  <div><%= plan.person %></div>
+  <div>Tick when complete! </div>
+  <div><%= plan.complete ? 'Yes' : 'Nope' %></div>
+  <button type = "submit">Add New Action</button> 
+</form>

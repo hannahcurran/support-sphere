@@ -16,14 +16,15 @@ passport.use(new GoogleStrategy(
             let user = await User.findOne({ googleId: profile.id });
             //exisiting user found
             if (user) return cb(null, user);
-            //we have a new user via OAuth
-            // user = await User.create({
-            //     name: profile.displayName,
-            //     googleId: profile.id,
-            //     email: profile.emails[0].value,
-            //     avatar: profile.photos[0].value,
-            // });
-            // return cb(null, user);
+       
+            //how to only allow specific people to log in and not random people able to access with google?
+            user = await User.create({
+                name: profile.displayName,
+                googleId: profile.id,
+                email: profile.emails[0].value,
+                avatar: profile.photos[0].value,
+            });
+            return cb(null, user);
         } catch (err) {
             return cb(err);
         }
