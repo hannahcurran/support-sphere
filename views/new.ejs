@@ -1,20 +1,21 @@
- <link rel='stylesheet' href='/stylesheets/style.css' />
-  <nav>
-    <a href="/home">HOME</a> |
-    <a href="/plans">PLAN</a> |
-     <a href="/logout">LOG OUT</a>
-       </nav>
- </nav>
+  <%- include('./partials/header') %>
+  <br><br>
 
-<form>
-  <section id="plan">
-  <div>What needs to happen? </div>
-  <div><%= plan.task %></div>  
-  <div>By when?: </div>
-  <div><%= plan.date %></div>
-  <div>By who?: </div>
-  <div><%= plan.person %></div>
-  <div>Tick when complete! </div>
-  <div><%= plan.complete ? 'Yes' : 'Nope' %></div>
-  <button type = "submit">Add New Action</button> 
-</form>
+ <h2> Add a New Action:</h2>  
+<section id="newTask">
+<form action="/plans" method= "POST">
+<table>
+   <tr>
+      <th>What needs to happen?</th>
+      <th>By when?</th>
+      <th>By who?</th>
+      <th>Add To Plan</th>
+      </tr>
+       <tr>
+      <td><input type ="text" name="what" required></td>
+      <td><input type ="date" name="when" required></td>
+      <td><input type ="text" name="who" required></td>
+      <td><button type="submit">Add</button>
+      </table>
+     
+<%- include('./partials/footer') %>

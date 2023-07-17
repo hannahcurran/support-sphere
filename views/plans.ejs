@@ -1,79 +1,38 @@
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <nav>
-    <a href="/home">HOME</a> |
-     <a href="/logout">LOG OUT</a>
-       
- </nav>
+ <%- include('./partials/header') %>
+
 <title> My Plan</title>
 <h2> My Plan </h2>
 
-<section id="plan">
- <table>
-    <tr>
-      <th>What needs to happen?</th>
-      <th>By when?</th>
-      <th>By who?</th>
-      <th>Tick when complete!</th>
-    </tr>
-    <tr>
-      <td>Data 1</td>
-      <td>Data 2</td>
-      <td>Data 3</td>
-      <td><input type ="checkbox"></td>
-    
-    </tr>
-    <tr>
-      <td>Data 5</td>
-      <td>Data 6</td>
-      <td>Data 7</td>
-      <td><input type ="checkbox"></td>
-    </tr>
-    <tr>
-      <td>Data 9</td>
-      <td>Data 10</td>
-      <td>Data 11</td>
-       <td><input type ="checkbox"></td>
-    </tr>
-    <tr>
-   
-      <td>Data 1</td>
-      <td>Data 14</td>
-      <td>Data 15</td>
-      <td><input type ="checkbox"></td>
-    </tr>
-    
-  </table>
-  </section>
-  <br>
 
-  <div style="text-align: center">
-  <a href="/new"><button>Add New Action</button></a>
+<div>
+  <form>
+    <table>
+      <tr>
+        <th>What needs to happen?</th>
+        <th>By When?</th>
+        <th>By Who?</th>
+        <th>Tick When Complete!</th>
+      </tr>
+      <tr>
+        <td>
+          <div><%= plan.what %></div>
+        </td>
+        <td>
+          <div><%= plan.when %></div>
+        </td>
+        <td>
+          <div><%= plan.who %></div>
+        </td>
+        <td>
+          <div><%= plan.complete %><input id="complete" type="checkbox"></label>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <a href="/new"><button>Add To Plan</button></a>
+  </form>
 </div>
 
-<br><br><h2>My Thoughts</h2>
-  <form>
-    <label for="going-well">What I think is going well at the moment:</label>
-    <textarea name="going-well" id="going-well"></textarea>
-    <br><br>
-    <label for="worries">What is worrying me at the moment:</label>
-    <textarea name="worries" id="worries"></textarea>
-    <br><br>
-    <label for="feeling">On a scale of 1-10, I feel...</label>
-    <select name="feeling" id="feeling">
-    <option value="" disabled selected>⚖️</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
-    <br><br>
-    <input type="submit" value="Add My Thoughts">
-  </form>
 
+  
  <%- include('./partials/footer') %>

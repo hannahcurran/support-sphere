@@ -7,6 +7,9 @@ a {
   color: #00B7FF;
 }
 
+h2{
+  text-align: center;
+}
 
 table {
   border-collapse: collapse;
@@ -20,6 +23,22 @@ th, td {
   text-align: center;
 }
 
+td input[type="text"] {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+td input[type="date"] {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
 th {
   background-color: #f2f2f2;
 }
@@ -27,11 +46,6 @@ th {
 th:nth-child(4),
 td:nth-child(4) {
   width: 10%;
-}
-
-h2,
-form {
-  text-align: center;
 }
 
 label {

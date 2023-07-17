@@ -1,0 +1,34 @@
+ <%- include('./partials/header') %>
+<br><br>
+<h2>Your Thoughts</h2>
+  <form id="thoughts-form" action="/thoughts" method= "POST">
+     <label for="going-well">What do you think is going well for you at the moment?</label>
+    <br>
+    <textarea name="going-well" id="going-well"></textarea>
+    <br><br>
+    <label for="worries">What is worrying you at the moment?</label>
+    <br>
+    <textarea name="worries" id="worries"></textarea>
+    <br><br>
+    <label for="feeling">On a scale of 1-10, how do you feel today...</label>
+    <br>
+    <select name="feeling" id="feeling">
+    <option value="" disabled selected>⚖️</option>
+      <option value="1">😄</option>
+      <option value="2">😊</option>
+      <option value="3">🙂</option>
+      <option value="4">😐</option>
+      <option value="5">😕</option>
+      <option value="6">😢</option>
+      <option value="7">😠</option>
+      <option value="8">😡</option>
+      <option value="9">😤</option>
+      <option value="10">🤬</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Add My Thoughts">
+  </form>
+
+<div id="thoughts-container"></div>
+
+  <%- include('./partials/footer') %>
