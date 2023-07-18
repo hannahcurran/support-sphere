@@ -3,6 +3,7 @@
 <title> My Plan</title>
 
 <h2> My Plan </h2>
+<% if (user) { %>
 <div>
     <table>
      <thead>
@@ -40,7 +41,7 @@
          </table>
     <a href="/plans/new"><button>Add To Plan</button></a>
   </div>
-
+<% } %>
 
   
  <%- include('../partials/footer') %>

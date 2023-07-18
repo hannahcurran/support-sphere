@@ -67,3 +67,8 @@ select {
   padding: 5px;
   text-align-last: center;
 }
+
+table.thoughts-log{
+  width: 15%;
+ float: left;
+}

@@ -1,11 +1,12 @@
- <%- include('./partials/header') %>
+ <%- include('../partials/header') %>
 <br><br>
-<h2>Your Thoughts</h2> <br>
+<h2>A Space For Your Thoughts</h2> <br>
 <h3> My Support Sphere is a place where you're respected, valued, and encouraged to share your thoughts openly.</h3>
+  <% if (user) { %>
   <form id="thoughts-form" action="/thoughts" method= "POST">
     <label for="date"></label>
   <br>
-  <input type="date" name="date" id="date" required= true>
+  <input type="date" name="date" id="date" required>
   <br><br>
   <label for="going-well">What do you think is going well for you at the moment?</label>
     <br>
@@ -31,9 +32,33 @@
       <option value="10">🤬</option>
     </select>
     <br><br>
-    <input type="submit" value="Add My Thoughts">
+    <input type="submit" value="Save">
   </form>
 
 <div id="thoughts-container"></div>
+<% } %>
+<br><br>
 
-  <%- include('./partials/footer') %>
+<h4>Your Saved Thoughts:</h4>
+<table class = "thoughts-log">
+     <thead>
+      <tr>
+        <th>Date</th>
+        <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+             
+      <tr>
+        <td>
+          <div>date from submitted form to appear here</div>
+        </td>
+        <td>
+          <a href="/thoughts/show"><button>View</button></a>
+             </td>
+        </div>
+        </td>
+      </tr>
+
+
+  <%- include('../partials/footer') %>
