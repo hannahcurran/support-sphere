@@ -13,6 +13,6 @@ router.post('/', plansCtrl.create)
 router.get('/', plansCtrl.plans);
 
 //DELETE /plans/:id
-
+router.delete('/:id', plansCtrl.delete); 
 
 module.exports = router;

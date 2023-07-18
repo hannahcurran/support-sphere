@@ -3,7 +3,18 @@ const Plan = require('../models/plan');
 module.exports = {
     new: newTask,
     create,
-    plans
+    plans,
+    delete : deletePlan
+}
+
+async function deletePlan(req ,res){
+try{ 
+    await Plan.findByIdAndDelete(req.params.id);
+    res.redirect('/plans');
+}catch(err){
+    console.log(err);
+
+}
 }
 
 async function plans(req, res) {

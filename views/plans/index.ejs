@@ -27,7 +27,11 @@
           <div><%= p.who %></div>
         </td>
         <td>
-          <div><%= p.complete %><input id="complete" type="checkbox"></label>
+          <div><form action="/plans/<%= p.id %>?_method=DELETE"
+          class="delete-form" 
+          method="POST">
+          <button id="complete" type="submit">✓</button> 
+          </form>
           </div>
         </td>
       </tr>
