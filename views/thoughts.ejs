@@ -1,8 +1,13 @@
  <%- include('./partials/header') %>
 <br><br>
-<h2>Your Thoughts</h2>
+<h2>Your Thoughts</h2> <br>
+<h3> My Support Sphere is a place where you're respected, valued, and encouraged to share your thoughts openly.</h3>
   <form id="thoughts-form" action="/thoughts" method= "POST">
-     <label for="going-well">What do you think is going well for you at the moment?</label>
+    <label for="date"></label>
+  <br>
+  <input type="date" name="date" id="date" required= true>
+  <br><br>
+  <label for="going-well">What do you think is going well for you at the moment?</label>
     <br>
     <textarea name="going-well" id="going-well"></textarea>
     <br><br>

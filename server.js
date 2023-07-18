@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
+var methodOverride = require('method-override');
 
 require('dotenv').config();
 require('./config/database');
@@ -14,7 +15,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const homeRouter = require('./routes/home');
 const plansRouter = require('./routes/plans');
-const newRouter = require('./routes/new');
+const newRouter = require('./routes/plans');
 const thoughtsRouter = require('./routes/thoughts');
 
 
@@ -31,6 +32,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(methodOverride('_method'));
 
 app.use(session({
   secret: process.env.SECRET,
@@ -49,7 +52,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/plans', plansRouter);
-app.use('/new', newRouter);
 app.use('/thoughts', thoughtsRouter);
 
 
