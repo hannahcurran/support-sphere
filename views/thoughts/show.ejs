@@ -11,23 +11,47 @@
   <label for="goingWell"> What is going well for you at the moment?</label>
   <br>
      <div name="goingWell" id="goingWell"><%= thought.goingWell %></div>
-     <br><br><br>
+     <br>
+       <form id = "update-thought" action="/thoughts/<%= thought._id %>" method="POST">
+<br>
+<label for="updateThought">UPDATE: </label>
+    <br>
+    <textarea name="goingWell" id="goingWell"><%= thought.goingWell %></textarea>
+    <br><br><br><br>
 
-     <label for="goingWell"> What is worrying you at the moment?</label>
+     <label for="worries"> What is worrying you at the moment?</label>
   <br>
    <div name="worries" id="worries"><%= thought.worries %></div>
- <br><br><br>
+ <br>
+ <form id = "update-thought" action="/thoughts/<%= thought._id %>" method="POST">
+<br>
+<label for="updateThought">UPDATE: </label>
+    <br>
+    <textarea name="worries" id="worries"><%= thought.worries %></textarea>
+    <br><br>
     <label for="feeling">On a scale of 1-10, how do you feel today...</label>
     <br>
     <div name="feeling" id="feeling"><%= thought.feeling %></div>
-    </section>
-    <br><br>
-<form id = "update-thought" action="/thoughts" method="POST">
+     <form id = "update-thought" action="/thoughts/<%= thought._id %>" method="POST">
 <br>
-<label for="updateThought">Add an update: </label>
+<label for="updateThought">UPDATE: </label>
     <br>
-    <textarea name="goingWell" id="goingWell"></textarea>
+    <select name="feeling" id="feeling">
+    <option value=" " disabled selected>⚖️</option>
+      <option value="😄">😄</option>
+      <option value="😊">😊</option>
+      <option value="🙂">🙂</option>
+      <option value="😐">😐</option>
+      <option value="😕">😕</option>
+      <option value="😢">😢</option>
+      <option value="😠">😠</option>
+      <option value="😡">😡</option>
+      <option value="😤">😤</option>
+      <option value="🤬">🤬</option>
+    </select>
+   
     <br><br>
+
     <input type="submit" value="Save & Close">
     </form>
   

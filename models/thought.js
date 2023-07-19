@@ -2,10 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const thoughtSchema = new Schema({
-    date: {type: Date, required: true},
-    goingWell: {type: String, required: true},
-    worries: {type: String, required: true},
-    feeling: {type:String, required: true},
+    date: {type: Date},
+    goingWell: {type: String},
+    worries: {type: String},
+    feeling: {type:String},
+    updates: {type: String},
+    user:{type: Schema.Types.ObjectId, ref:'User'}
    }, {
     timestamps: true
 });

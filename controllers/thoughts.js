@@ -9,8 +9,13 @@ module.exports = {
 }
 
 async function update(req,res){
+    console.log(req.user._id);
     try{
-        await Thought.update(req.body);
+        const currentThought = await Thought.findById(req.params.id);
+        if(req.user._id !== currentThought.user._id){
+            throw new Error();
+        }
+        await Thought.findByIdAndUpdate(req.params.id, req.body);
         res.redirect('/thoughts');
 
     }catch(err){
@@ -21,6 +26,7 @@ async function update(req,res){
 }
 
 async function create(req, res) {
+   req.body.user = req.user._id;
     try {
         await Thought.create(req.body);
         res.redirect('/thoughts');

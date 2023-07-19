@@ -20,7 +20,7 @@ router.get('/show/:id', thoughtsCtrl.show);
 router.post('/show', thoughtsCtrl.create)
 
 // //UPDATE a thought
-router.put('/thoughts/:id', thoughtsCtrl.update);
+router.post('/:id', thoughtsCtrl.update);
 
 
 module.exports = router;
