@@ -1,36 +1,36 @@
  <%- include('../partials/header') %>
+ <br>
+ <br>
 
-<form id="thoughts-form" action="/thoughts" method= "POST">
-    <label for="date"></label>
+<% if (user) { %>
+
+<section>
   <br>
-  <input type="date" name="date" id="date" required= true>
+<div>Your Thoughts From: <%= thought.date.toLocaleDateString() %></div>
   <br><br>
-  <label for="going-well">What do you think is going well for you at the moment?</label>
-    <br>
-    <textarea name="going-well" id="going-well"></textarea>
-    <br><br>
-    <label for="worries">What is worrying you at the moment?</label>
-    <br>
-    <textarea name="worries" id="worries"></textarea>
-    <br><br>
+  <label for="goingWell"> What is going well for you at the moment?</label>
+  <br>
+     <div name="goingWell" id="goingWell"><%= thought.goingWell %></div>
+     <br><br><br>
+
+     <label for="goingWell"> What is worrying you at the moment?</label>
+  <br>
+   <div name="worries" id="worries"><%= thought.worries %></div>
+ <br><br><br>
     <label for="feeling">On a scale of 1-10, how do you feel today...</label>
     <br>
-    <select name="feeling" id="feeling">
-    <option value="" disabled selected>⚖️</option>
-      <option value="1">😄</option>
-      <option value="2">😊</option>
-      <option value="3">🙂</option>
-      <option value="4">😐</option>
-      <option value="5">😕</option>
-      <option value="6">😢</option>
-      <option value="7">😠</option>
-      <option value="8">😡</option>
-      <option value="9">😤</option>
-      <option value="10">🤬</option>
-    </select>
+    <div name="feeling" id="feeling"><%= thought.feeling %></div>
+    </section>
     <br><br>
-    <input type="submit" value="Save My Thoughts">
-  </form>
-
+<form id = "update-thought" action="/thoughts" method="POST">
+<br>
+<label for="updateThought">Add an update: </label>
+    <br>
+    <textarea name="goingWell" id="goingWell"></textarea>
+    <br><br>
+    <input type="submit" value="Save & Close">
+    </form>
   
+
+     <% } %>
 <%- include('../partials/footer') %>

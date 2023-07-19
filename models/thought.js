@@ -5,7 +5,7 @@ const thoughtSchema = new Schema({
     date: {type: Date, required: true},
     goingWell: {type: String, required: true},
     worries: {type: String, required: true},
-    feeling: {type:Number, required: true},
+    feeling: {type:String, required: true},
    }, {
     timestamps: true
 });

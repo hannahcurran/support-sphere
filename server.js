@@ -16,7 +16,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const homeRouter = require('./routes/home');
 const plansRouter = require('./routes/plans');
-// const newRouter = require('./routes/plans');
 const thoughtsRouter = require('./routes/thoughts');
 // const showRouter = require('./routes/thoughts');
 

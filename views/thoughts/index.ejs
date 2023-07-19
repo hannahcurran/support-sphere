@@ -1,45 +1,49 @@
  <%- include('../partials/header') %>
+  <% if (user) { %>
 <br><br>
 <h2>A Space For Your Thoughts</h2> <br>
 <h3> My Support Sphere is a place where you're respected, valued, and encouraged to share your thoughts openly.</h3>
-  <% if (user) { %>
+  
   <form id="thoughts-form" action="/thoughts" method= "POST">
     <label for="date"></label>
   <br>
   <input type="date" name="date" id="date" required>
   <br><br>
-  <label for="going-well">What do you think is going well for you at the moment?</label>
+  <label for="goingWell">What do you think is going well for you at the moment?</label>
     <br>
-    <textarea name="going-well" id="going-well"></textarea>
+    <textarea name="goingWell" id="goingWell" required></textarea>
     <br><br>
     <label for="worries">What is worrying you at the moment?</label>
     <br>
-    <textarea name="worries" id="worries"></textarea>
+    <textarea name="worries" id="worries" required></textarea>
     <br><br>
     <label for="feeling">On a scale of 1-10, how do you feel today...</label>
     <br>
     <select name="feeling" id="feeling">
     <option value="" disabled selected>⚖️</option>
-      <option value="1">😄</option>
-      <option value="2">😊</option>
-      <option value="3">🙂</option>
-      <option value="4">😐</option>
-      <option value="5">😕</option>
-      <option value="6">😢</option>
-      <option value="7">😠</option>
-      <option value="8">😡</option>
-      <option value="9">😤</option>
-      <option value="10">🤬</option>
+      <option value="😄">😄</option>
+      <option value="😊">😊</option>
+      <option value="🙂">🙂</option>
+      <option value="😐">😐</option>
+      <option value="😕">😕</option>
+      <option value="😢">😢</option>
+      <option value="😠">😠</option>
+      <option value="😡">😡</option>
+      <option value="😤">😤</option>
+      <option value="🤬">🤬</option>
     </select>
     <br><br>
     <input type="submit" value="Save">
   </form>
 
 <div id="thoughts-container"></div>
-<% } %>
+
 <br><br>
 
 <h4>Your Saved Thoughts:</h4>
+
+
+
 <table class = "thoughts-log">
      <thead>
       <tr>
@@ -48,17 +52,18 @@
         </tr>
       </thead>
       <tbody>
-             
+    <% thoughts.forEach(function(t) { %>         
       <tr>
         <td>
-          <div>date from submitted form to appear here</div>
+          <div><%= t.date.toLocaleDateString() %></div>
         </td>
         <td>
-          <a href="/thoughts/show"><button>View</button></a>
+          <a href="/thoughts/show/<%= t._id %>"><button>View</button></a>
              </td>
         </div>
         </td>
       </tr>
+        <% }) %>
 
-
+  <% } %>
   <%- include('../partials/footer') %>
