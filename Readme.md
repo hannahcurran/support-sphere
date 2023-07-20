@@ -31,6 +31,12 @@ The current version of Support Sphere provides a good starting point, proving th
 
 /////////☐ Screenshot(s): A screenshot of your app's landing page and any other screenshots of interest.
 
+![plan](<Screenshot 2023-07-20 at 20.18.11.png>)
+![add to plan](<Screenshot 2023-07-20 at 20.18.40.png>)
+![thoughts page](<Screenshot 2023-07-20 at 20.19.16.png>)
+![thoughts/ show](<Screenshot 2023-07-20 at 20.19.33.png>)
+
+
 ☐ Technologies Used: 
 ☐ HTML
 ☐ CSS
@@ -41,16 +47,19 @@ The current version of Support Sphere provides a good starting point, proving th
 ☐ OAuth
 ☐ Passport.js
 
-///////☐ Getting Started:Include a link to the deployed app and your Trello board with the project's planning.
+☐ Getting Started:
+☐ Trello board (planning):
 https://trello.com/b/HSkA6eyp/project-2-my-support-sphere
 
+☐ Link to deployed app: ..................(to be added)
 
-/// ☐ Bugs
 
 ☐ Future Enhancements and Continuous Improvement:
 
 ☐ Create a more visually appealing UI.
-Additional tools for personalisation, such as allowing young people to set some of their goals, track milestones, and manage their preferences within the app. 
-☐ 
-☐ Interactive elements, such as progress visualisations and achievement badges etc.
+☐ Additional tools for personalisation, such as allowing young people to set some of their goals, track milestones, and manage their preferences within the app. 
+☐ Additional interactive elements, such as progress visualisations and achievement badges etc.
 ☐ Data security and privacy.
+☐ A feature on the 'Plan' page to allow a space for regular updates on actions within the plan. 
+
+

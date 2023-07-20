@@ -3,9 +3,9 @@ var router = express.Router();
 const passport = require('passport');
 
 /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'My Support Sphere' });
-// });
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
 
 router.get('/auth/google', passport.authenticate(
   'google', 
@@ -19,13 +19,13 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     successRedirect: '/home',
-    failureRedirect: '/index'
+    failureRedirect: '/'
   }
 ));
 
 router.get('/logout', function(req, res){
   req.logout(function(){
-    res.redirect('/index')
+    res.redirect('/')
   });
 });
 
