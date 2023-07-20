@@ -30,7 +30,7 @@ The current version of Support Sphere provides a good starting point, proving th
 
 
 /////////☐ Screenshot(s): A screenshot of your app's landing page and any other screenshots of interest.
-
+![home](<Screenshot 2023-07-20 at 20.54.41.png>)
 ![plan](<Screenshot 2023-07-20 at 20.18.11.png>)
 ![add to plan](<Screenshot 2023-07-20 at 20.18.40.png>)
 ![thoughts page](<Screenshot 2023-07-20 at 20.19.16.png>)

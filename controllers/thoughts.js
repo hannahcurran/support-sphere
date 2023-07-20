@@ -12,11 +12,13 @@ async function update(req,res){
     console.log(req.user._id);
     try{
         const currentThought = await Thought.findById(req.params.id);
-        if(req.user._id !== currentThought.user._id){
+         const reqId = String(req.user._id);
+        const currentThoughtUserId = String(currentThought.user);
+            if(reqId !== currentThoughtUserId){
             throw new Error();
         }
-        await Thought.findByIdAndUpdate(req.params.id, req.body);
-        res.redirect('/thoughts');
+        await Thought.findByIdAndUpdate(req.params.id, req.body)
+                    res.redirect('/thoughts');
 
     }catch(err){
         console.log(err)
@@ -46,7 +48,7 @@ function newThought(req, res) {
 async function thoughts(req, res) {
     try {
         const thoughts = await Thought.find({})
-        console.log(thoughts);
+        // console.log(thoughts);
 
         res.render('thoughts', {
             thoughts
