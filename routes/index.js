@@ -3,9 +3,9 @@ var router = express.Router();
 const passport = require('passport');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'My Support Sphere' });
-});
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'My Support Sphere' });
+// });
 
 router.get('/auth/google', passport.authenticate(
   'google', 

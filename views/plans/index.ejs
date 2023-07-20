@@ -1,46 +1,38 @@
- <%- include('../partials/header') %>
+<%- include('../partials/header') %>
 <% if (user) { %>
-<title> Your Plan</title>
+<title>Your Plan</title>
 
-<h2> Your Plan </h2>
-<div>
-    <table>
-     <thead>
-      <tr>
-        <th>What needs to happen?</th>
-        <th>By When?</th>
-        <th>By Who?</th>
-        <th>Tick When Complete!</th>
-      </tr>
+<section class="plan-section">
+  <h2>Your Plan</h2>
+  <div class="plan-table-container">
+    <table class="plan-table">
+      <thead>
+        <tr>
+          <th>What needs to happen?</th>
+          <th>By When?</th>
+          <th>By Who?</th>
+          <th>Tick When Complete!</th>
+        </tr>
       </thead>
       <tbody>
-       <% plans.forEach(function(p) { %>
-       
-      <tr>
-        <td>
-          <div><%= p.what %></div>
-        </td>
-        <td>
-          <div><%= p.when.toLocaleDateString() %></div>
-        </td>
-        <td>
-          <div><%= p.who %></div>
-        </td>
-        <td>
-          <div><form action="/plans/<%= p.id %>?_method=DELETE"
-          class="delete-form" 
-          method="POST">
-          <button id="complete" type="submit">✓</button> 
-          </form>
-          </div>
-        </td>
-      </tr>
-  <% }) %>
+        <% plans.forEach(function(p) { %>
+        <tr>
+          <td><%= p.what %></td>
+          <td><%= p.when.toLocaleDateString() %></td>
+          <td><%= p.who %></td>
+          <td>
+            <form action="/plans/<%= p.id %>?_method=DELETE" class="delete-form" method="POST">
+              <button id="complete" type="submit">✓</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
       </tbody>
-         </table>
+    </table>
     <a href="/plans/new"><button>Add To Plan</button></a>
   </div>
+</section>
+
 <% } %>
 
-  
- <%- include('../partials/footer') %>
+<%- include('../partials/footer') %>

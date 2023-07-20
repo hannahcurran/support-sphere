@@ -1,25 +1,25 @@
  <%- include('../partials/header') %>
   <% if (user) { %>
-<br><br>
-<h2>A Space For Your Thoughts</h2> <br>
-<h3> Support Sphere is a place where you're respected, valued, and encouraged to share your thoughts openly.</h3>
-  
-  <form id="thoughts-form" action="/thoughts" method= "POST">
-    <label for="date"></label>
+<section class="thoughts-section">
+  <h2>A Space For Your Thoughts</h2>
+  <h3>Support Sphere is a place where you're respected, valued, and encouraged to share your thoughts openly.</h3>
   <br>
-  <input type="date" name="date" id="date" required>
-  <br><br>
+
+  <form id="thoughts-form" action="/thoughts" method="POST">
+    <label for="date"></label>
+
+    <input type="date" name="date" id="date" required>
+  <br>
   <label for="goingWell">What do you think is going well for you at the moment?</label>
-    <br>
+    
     <textarea name="goingWell" id="goingWell" required></textarea>
-    <br><br>
+    <br>
     <label for="worries">What is worrying you at the moment?</label>
+        <textarea name="worries" id="worries" required></textarea>
     <br>
-    <textarea name="worries" id="worries" required></textarea>
-    <br><br>
-    <label for="feeling">On a scale of 1-10, how do you feel today...</label>
-    <br>
-    <select name="feeling" id="feeling">
+
+    <label for="feeling">Overall, how do you feel today...</label>
+        <select name="feeling" id="feeling">
     <option value="" disabled selected>⚖️</option>
       <option value="😄">😄</option>
       <option value="😊">😊</option>
@@ -32,17 +32,12 @@
       <option value="😤">😤</option>
       <option value="🤬">🤬</option>
     </select>
-    <br><br>
-    <input type="submit" value="Save">
+      <input type="submit" value="Save">
   </form>
 
 <div id="thoughts-container"></div>
 
-<br><br>
-
 <h4>Your Saved Thoughts:</h4>
-
-
 
 <table class = "thoughts-log">
      <thead>
@@ -58,12 +53,10 @@
           <div><%= t.date.toLocaleDateString() %></div>
         </td>
         <td>
-          <a href="/thoughts/show/<%= t._id %>"><button>View</button></a>
+          <a href="/thoughts/show/<%= t._id %>"><button>🔍</button></a>
              </td>
-        </div>
-        </td>
-      </tr>
-        <% }) %>
-
+                       <% }) %>
+         </table>
+        </section>
   <% } %>
   <%- include('../partials/footer') %>

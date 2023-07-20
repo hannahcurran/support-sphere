@@ -39,6 +39,7 @@ function newTask(req, res) {
 }
 
 async function create(req, res) {
+    req.body.user = req.user._id;
     try {
         await Plan.create(req.body);
         res.redirect('plans/');
