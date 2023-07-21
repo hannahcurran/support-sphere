@@ -51,7 +51,7 @@ The current version of Support Sphere provides a good starting point, proving th
 ☐ Trello board (planning):
 https://trello.com/b/HSkA6eyp/project-2-my-support-sphere
 
-☐ Link to deployed app: ..................(to be added)
+☐ Link to deployed app: https://support-sphere-24005a287aef.herokuapp.com/
 
 ☐ Bugs:
 ☐ Currently, the date inputs will accept previous dates - this needs to be fixed so that only current / future dates can be added.
