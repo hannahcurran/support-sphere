@@ -35,7 +35,6 @@ function newTask(req, res) {
     console.log('newTask');
     res.render('plans/new', { errorMsg: '' });
     
-
 }
 
 async function create(req, res) {

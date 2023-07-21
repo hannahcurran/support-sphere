@@ -20,7 +20,7 @@ The app is designed to ensure that the young person feels valued, empowered, and
 
 By making the content more accessible and engaging, Support Sphere ensures that the young person can easily understand and interact with their support plan.
 
-Support Sphere will help with collaboration between the young person and their support network. By involving all relevant parties in the planning process, the app will ensure that everyone is aligned with the young person's goals and works together to provide holistic support.
+Support Sphere will help with collaboration between the young person and their social worker. By involving all relevant parties in the planning process, the app will ensure that everyone is aligned with the young person's goals and works together to provide holistic support.
 
 
 During project week, I've laid the foundation for Support Sphere, creating a simple and basic version that meets the essential technical requirements for a project. While the current version serves its purpose in empowering young people to have more control over their support plans, I recognize that there is huge potential for growth and enhancement as my skills continue to evolve!
@@ -53,6 +53,8 @@ https://trello.com/b/HSkA6eyp/project-2-my-support-sphere
 
 ☐ Link to deployed app: ..................(to be added)
 
+☐ Bugs:
+☐ Currently, the date inputs will accept previous dates - this needs to be fixed so that only current / future dates can be added.
 
 ☐ Future Enhancements and Continuous Improvement:
 
