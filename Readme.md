@@ -1,10 +1,10 @@
 ☐ SUPPORT SPHERE - Empowering Young People for Positive Change
-
-WHAT:
+<br>
+What is this app?:
 Support Sphere is an application designed to empower young people with social workers and support plans. The goal is to transform the way support plans are created, managed, and experienced, putting the needs and aspirations of young people at the centre of the process.
 
-
-WHY:
+<br>
+Why is it useful?:
 Traditionally, young people with support plans have been presented with lengthy, wordy, and often overwhelming documents that are difficult to read, engage with, and comprehend. These conventional support plans, while well-intentioned, have several critical issues that hinder their effectiveness and impact:
 
     - Lack of Engagement: Lengthy support plans can be daunting and unappealing to young people, leading to disengagement. They might avoid reading them altogether, missing out on valuable information and opportunities.
@@ -14,8 +14,8 @@ Traditionally, young people with support plans have been presented with lengthy,
     - Limited Autonomy: The conventional approach places young people in a passive role, as if they are merely recipients of care, rather than active participants in shaping their support and future.
 
     -Professional-Centric Focus: Existing support plans can sometimes feel like they serve the needs of professionals and adults more than the children they are meant to support, diminishing the young person's sense of ownership and control. If the language and content of the plan are too technical or dense, it can hinder effective communication and mutual understanding with young people.
-
-HOW:
+<br>
+How will it help?:
 The app is designed to ensure that the young person feels valued, empowered, and actively involved in shaping their support plan. Support Sphere will allow young people to actively co-create their support plans alongside their social workers or support team. They will have the opportunity to express their preferences, set goals that align with their interests, and track them regularly through the app.
 
 By making the content more accessible and engaging, Support Sphere ensures that the young person can easily understand and interact with their support plan.
@@ -28,15 +28,15 @@ During project week, I've laid the foundation for Support Sphere, creating a sim
 
 The current version of Support Sphere provides a good starting point, proving the concept and showcasing some of the value it can bring to young people with support plans. By keeping the initial design simple and user-friendly, I've ensured that the core functionalities are effective and easy to use.
 
-
-☐ Screenshot(s): A screenshot of your app's landing page and any other screenshots of interest.
+<br>
+☐ Screenshot(s):
 ![home](<Screenshot 2023-07-20 at 20.54.41.png>)
 ![plan](<Screenshot 2023-07-20 at 20.18.11.png>)
 ![add to plan](<Screenshot 2023-07-20 at 20.18.40.png>)
 ![thoughts page](<Screenshot 2023-07-20 at 20.19.16.png>)
 ![thoughts/ show](<Screenshot 2023-07-20 at 20.19.33.png>)
 
-
+<br>
 ☐ Technologies Used: 
 ☐ HTML
 ☐ CSS
@@ -47,15 +47,18 @@ The current version of Support Sphere provides a good starting point, proving th
 ☐ OAuth
 ☐ Passport.js
 
+<br>
 ☐ Getting Started:
 ☐ Trello board (planning):
 https://trello.com/b/HSkA6eyp/project-2-my-support-sphere
 
 ☐ Link to deployed app: https://support-sphere-24005a287aef.herokuapp.com/
+<br>
 
 ☐ Bugs:
 ☐ Currently, the date inputs will accept previous dates - this needs to be fixed so that only current / future dates can be added.
 
+<br>
 ☐ Future Enhancements and Continuous Improvement:
 
 ☐ Create a more visually appealing UI.
