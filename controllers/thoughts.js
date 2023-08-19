@@ -45,20 +45,21 @@ function newThought(req, res) {
 }
 
 
+
 async function thoughts(req, res) {
     try {
-        const thoughts = await Thought.find({})
-        // console.log(thoughts);
-
-        res.render('thoughts', {
-            thoughts
-        });
-    }
-    catch (err) {
+        if (req.isAuthenticated()) {
+            const thoughts = await Thought.find({ user: req.user.id }).exec();
+            res.render('thoughts', { user: req.user, thoughts }); 
+          } else {
+            res.redirect('/login'); 
+          }
+         } catch (err) {``
         console.log(err);
 
     }
 }
+
 
 async function show(req, res) {
     try {

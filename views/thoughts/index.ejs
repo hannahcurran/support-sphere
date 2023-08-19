@@ -35,8 +35,11 @@
       <input type="submit" value="Save">
   </form>
 
+
 <div id="thoughts-container"></div>
 
+
+<% if (user) { %>
 <h3>Your Saved Thoughts:</h3>
 
 <table class = "thoughts-log">
@@ -54,9 +57,14 @@
         </td>
         <td>
           <a href="/thoughts/show/<%= t._id %>"><button>🔍</button></a>
-             </td>
-                       <% }) %>
+            </td>
+            </tr>
+            <% }) %>
+          </tbody>
          </table>
+         <% } else { %>
+         <p>Please log in to view your saved thoughts.</p>
+          <% } %>
         </section>
   <% } %>
   <%- include('../partials/footer') %>

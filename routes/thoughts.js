@@ -22,7 +22,6 @@ router.post('/show', thoughtsCtrl.create)
 // //UPDATE a thought
 router.post('/:id', thoughtsCtrl.update);
 
-
 module.exports = router;
 
 

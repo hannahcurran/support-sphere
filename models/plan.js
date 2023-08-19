@@ -6,6 +6,7 @@ const newTaskSchema = new Schema({
         when: {type: Date, required: true},
         who: {type:String, required: true},
         complete:{type: Boolean},
+        user:{type: Schema.Types.ObjectId, ref:'User'}
     }, {
         timestamps: true
     });
@@ -16,6 +17,7 @@ const planSchema = new Schema({
     who: {type:String, required: true},
     complete:{type: Boolean},
     newTask: [newTaskSchema],
+    user:{type: Schema.Types.ObjectId, ref:'User'}
  }, {
     timestamps: true
 });

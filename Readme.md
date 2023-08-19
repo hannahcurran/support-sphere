@@ -29,7 +29,7 @@ During project week, I've laid the foundation for Support Sphere, creating a sim
 The current version of Support Sphere provides a good starting point, proving the concept and showcasing some of the value it can bring to young people with support plans. By keeping the initial design simple and user-friendly, I've ensured that the core functionalities are effective and easy to use.
 
 
-/////////☐ Screenshot(s): A screenshot of your app's landing page and any other screenshots of interest.
+☐ Screenshot(s): A screenshot of your app's landing page and any other screenshots of interest.
 ![home](<Screenshot 2023-07-20 at 20.54.41.png>)
 ![plan](<Screenshot 2023-07-20 at 20.18.11.png>)
 ![add to plan](<Screenshot 2023-07-20 at 20.18.40.png>)

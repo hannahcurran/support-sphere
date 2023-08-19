@@ -1,5 +1,13 @@
  <%- include('./partials/header') %>
 <h1> Support Sphere</h1>
 
-<h3> Log in to get started...</h3>
+<% if (user) { %>
+  <h3>You're logged in! <br>
+  Use the links above to move around your Sphere... </h3>
+<% } else { %>
+  <h3>Log in to get started...</h3>
+<% } %>
+
+
 <%- include('./partials/footer') %>
+
