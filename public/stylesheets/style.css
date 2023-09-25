@@ -2,26 +2,69 @@ body {
   padding: 30px;
   font-family: 'Jost', sans-serif;
   font: 14px;
-  background-color: #ACE1AF;
+  background-color: #ffffff;
   text-align: center;
   
 }
 
 
 nav {
-  color: #8cc751;
+  color: #437d21;
   text-align: right;
   
 }
+
+/* Home Page */
+
+.SS-banner-logo{
+  border: 5px #437d21 solid;
+  border-radius: 15px;
+
+}
+
+.home-h3{
+color: #437d21;;
+}
+
+
+/*  Plan Page */
+
+.SS-plan-image{
+  border: 5px #437d21 solid;
+  border-radius: 15px;
+}
+
+
+/*  Add to Plan Page */
+
+.SS-addToPlan-image{
+  border: 5px #437d21 solid;
+  border-radius: 15px;
+
+}
+
+
+/* Thoughts Page */
+
+.SS-thoughts-header-image{
+  border: 5px #437d21 solid;
+  border-radius: 15px;
+}
+
+.thoughts-page-h3{
+  color: #437d21;
+}
+
+
 
 a {
 color: #00AB66;
 
 }
 
-h2{
+/* h2{
   color:black;
-}
+} */
 
 h3{
   text-align: center;
@@ -36,7 +79,7 @@ table {
 }
 
 th, td {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 8px;
   text-align: center;
 }
@@ -179,7 +222,7 @@ select:hover {
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   background-color: #F5F5F5;
 }
 
@@ -210,7 +253,7 @@ select:hover {
   background-color: #F5F5F5;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   margin-bottom: 20px;
   width: 100%;
   max-width: 500px;
@@ -300,7 +343,7 @@ select {
 
 .plan-table th {
   background-color: #00AB66;
-  color: black;
+  /* color: black; */
 }
 
 /* 'Add To Plan' button */
@@ -389,3 +432,7 @@ margin: 10px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin: 10px;
 }
+
+
+
+

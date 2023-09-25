@@ -1,8 +1,10 @@
  <%- include('../partials/header') %>
   <% if (user) { %>
 <section class="thoughts-section">
-  <h2>A Space For Your Thoughts</h2>
-  <h3>Support Sphere is a place where you're respected, valued, and encouraged to share your thoughts openly.</h3>
+
+<img src="/images/SSthoughts.png" alt="Thoughts-header Image" class="SS-thoughts-header-image">
+
+  <h3 class="thoughts-page-h3">Support Sphere is a place where you're respected, valued, and encouraged to share your thoughts openly.</h3>
   <br>
 
   <form id="thoughts-form" action="/thoughts" method="POST">
@@ -68,3 +70,5 @@
         </section>
   <% } %>
   <%- include('../partials/footer') %>
+
+  
