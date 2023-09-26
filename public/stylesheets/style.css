@@ -1,20 +1,63 @@
 body {
   padding: 30px;
   font-family: 'Jost', sans-serif;
-  font: 14px;
   background-color: #ffffff;
   text-align: center;
   
 }
 
-
 nav {
-  color: #437d21;
   text-align: right;
   
 }
 
-/* Home Page */
+/*  nav links */
+a {
+  color: #437d21;
+  text-decoration: none;
+  font-size: 15px;
+  } 
+
+button {
+  padding: 10px 20px;
+  color: #437d21;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  flex: 1;
+  margin: 10px;
+  background-color: #e6e6e6;
+  border-color: #437d21;
+  border-width: 2px;
+}
+
+/*  animations */
+button,
+select {
+
+  transition: transform 0.3s ease;
+}
+
+button:hover,
+select:hover {
+  transform: scale(1.1);
+
+}
+
+
+/*  Index Page */
+.index-page-para{
+  font-size: 20px;
+
+}
+
+.login-btn{
+border-width: 4px;
+border-radius: 10px;
+
+}
+
+/* Landing/ Home Page */
 
 .SS-banner-logo{
   border: 5px #437d21 solid;
@@ -57,19 +100,17 @@ color: #437d21;;
 
 
 
-a {
-color: #00AB66;
 
-}
 
-/* h2{
-  color:black;
-} */
 
-h3{
-  text-align: center;
-  color: #00AB66;
-}
+
+
+
+
+
+
+/* CODE BELOW TO BE REFACTORED OR DELETED IF DUPLICATED */
+
 
 table {
   border-collapse: collapse;
@@ -155,10 +196,6 @@ table.thoughts-log{
  float: left;
 }
 
-button {
-  font-family: 'Jost', sans-serif;
-  background-color: #00AB66;
-}
 
 p {
   border: 1px solid #ccc;
@@ -188,18 +225,7 @@ form {
 } 
 
 
-/*  animations */
-button,
-select {
 
-  transition: transform 0.3s ease;
-}
-
-button:hover,
-select:hover {
-  transform: scale(1.1);
-  background-color: #8cc751;
-}
 
 
 /* Media query for smaller screens */
@@ -272,23 +298,7 @@ textarea {
   border-radius: 5px;
 }
 
-/* animations */
-button,
-select {
-  transition: transform 0.3s ease;
-}
 
-button:hover,
-select:hover {
-  transform: scale(1.1);
-  background-color: #8cc751;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 600px) {
-  .rounded-box {
-    padding: 10px;
-  }}
 
   textarea {
     font-size: 16px;
@@ -346,47 +356,6 @@ select {
   /* color: black; */
 }
 
-/* 'Add To Plan' button */
-.plan-table-container a {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  text-decoration: none;
-}
-
-.plan-table-container button {
-  padding: 10px 20px;
-  /*background-color: #00AB66;*/
-  color: black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  flex: 1;
-margin: 10px;
-
-
-}
-
-.plan-table-container button:hover {
-  background-color: #8cc751;
-  transform: scale(1.1);
-  color: black;
-}
-
-
-#complete {
- font-size: 18px;
-  background-color: #00AB66;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-#complete:hover {
-  transform: scale(1.5);
-  background-color: #8cc751;
-}
-
 
 #newTask {
   display: flex;
@@ -420,17 +389,6 @@ margin: 10px;
 #newTask th {
   background-color: #00AB66;
   color: black;
-}
-
-
-#newTask button {
-  padding: 10px 20px;
-   color: black;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin: 10px;
 }
 
 

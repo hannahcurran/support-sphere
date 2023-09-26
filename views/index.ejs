@@ -1,11 +1,29 @@
  <%- include('./partials/header') %>
-<h1> Support Sphere</h1>
+<img src="/images/SSbanner.png" alt="Banner Image" class="SS-banner-logo">
+
+<p class="index-page-para">
+Support Sphere is a safe and 
+empowering space for young people to connect, grow, and 
+take charge of their Social Care journeys. 
+<br><br>
+
+We understand that navigating the world of
+Social Care can sometimes feel overwhelming
+or uncertain, but we're here to change that.
+  <br> <br>
+
+This platform is all about giving young people the tools,
+resources, and opportunities to lead on 
+their support plans, express themselves,
+and be heard.
+      
+ </p>
 
 <% if (user) { %>
   <h3>You're logged in! <br>
   Use the links above to move around your Sphere... </h3>
 <% } else { %>
-  <h3>Log in to get started...</h3>
+ <button class="login-btn"><a href="/auth/google">Log In / Sign Up &nbsp;</a></button>
 <% } %>
 
 
